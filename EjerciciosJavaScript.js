@@ -1,5 +1,5 @@
 /* 1. Programa una función que cuente el número de carácteres de una cadena de texto. 
-Por ejemplo, myFunction("Hola Mundo"), te devolverá 10. */
+Por ejemplo, myFunction("Hola Mundo") devolverá 10. */
 
 function myFunction(string = "") {
   if (!string) {
@@ -220,8 +220,17 @@ const temperatureConversion = (grados = undefined, unidad = undefined) => {
     !/(C|F)/.test(unidad)
   ) {
     return console.warn("No ingresaste datos válidos");
+  } else {
+    if (unidad === "C") {
+      return console.log(`${grados}°C = ${Math.round((grados)*(9/5))+32}°F`)
+    } else {
+      return console.log(`${grados}°F = ${Math.round(((grados)-32)*(5/9))}°C`)
+    }
   }
 };
+
+temperatureConversion(100, "C")
+temperatureConversion(32, "F")
 
 /* 15.Programa una función para convertir números de base binaria a decimal y viceversa.
 Por ejemplo, myFunction(100,2) devolverá 4 base 10. */
@@ -239,7 +248,7 @@ Por ejemplo, myFunction("Hola Mundo") devuelva Vocales: 4, Consonantes: 5. */
 Por ejemplo, myFunction("Juan Pérez") devolverá verdadero. */
 
 /* 20.Programa una función que valide que un texto sea un email válido.
-Por ejemplo, myFunction("jonmircha@gmail.com") devolverá verdadero. */
+Por ejemplo, myFunction("juanperez@gmail.com") devolverá verdadero. */
 
 /* 21.Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado.
 Por ejemplo, miFunction([1, 4, 5]) devolverá [1, 16, 25]. */
